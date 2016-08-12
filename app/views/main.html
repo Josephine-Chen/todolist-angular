@@ -1,0 +1,80 @@
+<div id="ctrl-exmpl" ng-controller="TodoCtrl">
+<html ng-app>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="//use.edgefonts.net/vast-shadow:n4:all.js"></script>
+    <script src="//use.edgefonts.net/vast-shadow:n4:all;megrim.js"></script>
+  </head>
+  <body>
+    <div class="todo-wrapper" ng-controller="TodoCtrl">
+      <h2>You've got a lot of things to do</h2>
+      <ul>
+        <li ng-repeat="todo in todos">
+          <input type="checkbox" ng-model="todo.done"/>
+          <span class="done-{{todo.done}}">{{todo.text}}</span>
+        </li>
+      </ul>
+      <form>
+        <input class="add-input" placeholder="I need to..." type="text" ng-model="formTodoText" ng-model-instant />
+        <button class="add-btn" ng-click="addTodo()"><h2>Add</h2></button>
+      </form>
+      
+      <button class="clear-btn" ng-click="remove()">Remove completed</button>
+    </div>
+  </body>
+  
+</html>
+<!-- <body>
+  <ul>
+        <li ng-repeat="todo in todos">
+          <input type="checkbox" ng-model="todo.done"/>
+          <span class="done-{{todo.done}}">{{todo.text}}</span>
+        </li>
+      </ul>
+      <form>
+        <input class="add-input" placeholder="I need to..." type="text" ng-model="todoInput" ng-model-instant />
+        <button class="add-btn" ng-click="todoAdd()"><h2>Add</h2></button>
+      </form>
+      
+      <button class="clear-btn" ng-click="clearCompleted()">Clear completed</button>
+    </div>
+  </body> -->
+<!-- <div class="jumbotron">
+  <h1>'Allo, 'Allo!</h1>
+  <p class="lead">
+    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
+    Always a pleasure scaffolding your apps.
+  </p>
+  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+</div>
+<body ng-app="myApp" ng-controller="todoCtrl">
+
+<div class="input-group">
+  <span class="input-group-addon" id="basic-addon1">TODO</span>
+  <form ng-submit="todoAdd()">
+    <input type="text" class="form-control" placeholder="Make a todo list" aria-describedby="basic-addon1">
+    <input type="Submit" value="Add New">
+  </form>
+</div>
+
+<div ng-repeat="x in todoList">
+  <input type = "checkbox" ng-model="x.done"> 
+  <span ng-bind = "x.todoText">
+  </span>
+</div>
+<p><button ng-click="remove()">Remove marked</button></p> -->
+
+<!-- <div class="row marketing">
+  <h4>HTML5 Boilerplate</h4>
+  <p>
+    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
+  </p>
+
+  <h4>Angular</h4>
+  <p>
+    AngularJS is a toolset for building the framework most suited to your application development.
+  </p>
+
+  <h4>Karma</h4>
+  <p>Spectacular Test Runner for JavaScript.</p>
+</div> -->

@@ -7,6 +7,7 @@
 
 body {
   padding: 0;
+  background-color: #CBF3F0;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -21,6 +22,7 @@ body {
 .header {
   border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
+  background-color: #2EC4B6;
 }
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
@@ -80,4 +82,8 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+ul{
+  list-style: none;
 }

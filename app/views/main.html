@@ -2,24 +2,40 @@
 <html ng-app>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-    <script src="//use.edgefonts.net/vast-shadow:n4:all.js"></script>
-    <script src="//use.edgefonts.net/vast-shadow:n4:all;megrim.js"></script>
+    <h1>AngularJS Todo List</h1>
+    <p>This is a simple todo list created to learn about using AngularJS. The files were set up using Yeoman.</p>
   </head>
+  <br>
   <body>
     <div class="todo-wrapper" ng-controller="TodoCtrl">
-      <h2>You've got a lot of things to do</h2>
-      <ul>
-        <li ng-repeat="todo in todos">
-          <input type="checkbox" ng-model="todo.done"/>
-          <span class="done-{{todo.done}}">{{todo.text}}</span>
+      <h2>Things you need to do</h2>
+      <ul class="">
+        <li class = "" ng-repeat="todo in todos">
+          <!-- <input type="checkbox" ng-model="todo.done"/>
+          <span class="done-{{todo.done}}">{{todo.text}}</span> -->
+
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="input-group">
+                <span class="input-group-addon">
+                  <input type="checkbox" ng-model="todo.done"/>
+                </span>
+                <input type="text" class="form-control" aria-label="..." value={{todo.text}}>
+              </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+          </div>
         </li>
       </ul>
       <form>
+        <div class="row">
+        <div class="col-lg-6 col-md-offset-1">
         <input class="add-input" placeholder="I need to..." type="text" ng-model="formTodoText" ng-model-instant />
-        <button class="add-btn" ng-click="addTodo()"><h2>Add</h2></button>
+        <button class="add-btn" ng-click="addTodo()">Add</button>
+      </div>
+    </div>
       </form>
-      
-      <button class="clear-btn" ng-click="remove()">Remove completed</button>
+      <br>
+      <button class="clear-btn" ng-click="remove()">Remove completed tasks</button>
     </div>
   </body>
   
